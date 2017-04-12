@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iyB-DJ-Ig6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iyB-DJ-Ig6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -83,7 +83,7 @@
         <!--Button View Controller-->
         <scene sceneID="hPc-77-tPW">
             <objects>
-                <viewController id="MOD-tP-Z1F" customClass="ButtonViewController" sceneMemberID="viewController">
+                <viewController id="MOD-tP-Z1F" customClass="ButtonViewController" customModule="Animations_Kiet_13110085" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ha3-Sg-dag"/>
                         <viewControllerLayoutGuide type="bottom" id="xVe-ZZ-HEI"/>
@@ -92,32 +92,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0D-1g-Qgk">
-                                <rect key="frame" x="161" y="318" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="bounce"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0D-1g-Qgk">
+                                <rect key="frame" x="134" y="272" width="101" height="45"/>
+                                <color key="backgroundColor" red="0.51493769019630209" green="1" blue="0.52981959640387688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="2gl-aB-nat"/>
+                                </constraints>
+                                <state key="normal" title="Be Bouncy"/>
                                 <connections>
                                     <action selector="bounce:" destination="MOD-tP-Z1F" eventType="touchUpInside" id="O8K-Mg-E0i"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c0D-1g-Qgk" firstAttribute="centerX" secondItem="KuX-pP-AnJ" secondAttribute="centerX" id="Hmf-yL-lzN"/>
+                            <constraint firstItem="c0D-1g-Qgk" firstAttribute="top" secondItem="ha3-Sg-dag" secondAttribute="bottom" constant="208" id="hCE-nA-Hlr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vF-Ar-RFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="284"/>
+            <point key="canvasLocation" x="1429.5999999999999" y="261.31934032983509"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="5fd-Og-bKu">
             <objects>
-                <tableViewController id="Uto-4R-dmQ" sceneMemberID="viewController">
+                <tableViewController id="Uto-4R-dmQ" customClass="TableViewController" customModule="Animations_Kiet_13110085" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vTx-55-yMT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jMS-yI-XN3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="jMS-yI-XN3">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jMS-yI-XN3" id="mTm-gy-GSC">
@@ -134,7 +141,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qY5-BT-qII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="-442"/>
+            <point key="canvasLocation" x="1274" y="-448"/>
         </scene>
     </scenes>
 </document>
